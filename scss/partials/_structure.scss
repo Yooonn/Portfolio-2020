@@ -1,0 +1,237 @@
+// site header
+
+.site-header, .site-footer {
+    background-color: $color-accent;
+    padding: 1em;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+
+    h1 {
+        font-family: $body-fontfamily;
+        font-size: 1.5em;
+        margin: .5em 0 0 0; //to adjust baseline 
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+// site header
+.site-header {
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+}
+
+
+// site footer
+.site-footer {
+    justify-content: center;
+    margin-top: 6em;
+}
+
+// site navigation
+
+
+.site-id h1 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.site-id h1 a {
+    display: inline-block;
+    padding: .6em 0;
+}
+
+/* SITE NAVIGATION */
+
+.site-nav {
+
+}
+
+.site-nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+.site-nav ul li {
+    display: inline-block;
+
+}
+
+.site-nav ul li a {
+    display: block;
+    padding: 1em 1.5em;
+    transition: all .4s ease;
+}
+
+@media (max-width:767px) {
+    .site-nav ul li a:hover {
+        background: #003;
+        color: #fff;
+    }
+}
+
+/* MENU BUITTON */
+
+.menu-button {
+    position: absolute;
+    top: 1.5em;
+    right: 4%;
+    display: flex;
+    /* float: right; */
+}
+
+
+@media (min-width: 768px) {
+    .menu-button {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+}
+
+/* NAVICON */
+
+.navicon {
+    cursor: default;
+    color: rgba(255,255,255,0);
+}
+
+.navicon::selection {
+    background: rgba(255,255,255,0);
+}
+
+.navicon::after {
+    cursor: pointer;
+    content: "\2630";
+    font-size: 1.5em;
+    color: rgba(0,0,0,1);
+    display: block;
+    margin-left: .5em;
+}
+
+
+.expanded .navicon::after {
+    content: "\2715";
+    transform: rotate(90deg);
+    transition: all .4s ease-out;
+}
+
+
+/* TOGGLE NAV */
+
+@media (max-width: 768px) {
+
+    .site-header.toggle-nav {
+        text-align: left;
+    }
+
+    .toggle-nav .site-nav ul li {
+        display: block;
+        text-align: center;
+    }
+
+    .toggle-nav .site-nav ul {
+        display: none;
+    }
+
+    .toggle-nav .site-nav.expanded ul {
+        display: block;
+    }
+}
+
+
+
+section {
+    padding: 6em 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+
+// HERO SECTION
+
+h2 {
+    font-size: 4em;
+}
+
+.hero {
+    background-color: $color-hero-bg;
+    padding: 6em 1em;
+    // text-align: center;
+    color: #fff;
+    background-image: url(https://picsum.photos/1600/900?grayscale);
+    background-size: cover;
+
+    // p {
+    //     margin-left: auto;
+    //     margin-right: auto;
+    // }
+}
+
+
+// HOVERBOX TEXT
+
+.hoverbox {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+}
+
+.hoverbox img {
+    max-width: 100%;
+}
+
+.hoverbox .hoverbox-layer-bottom {
+    display: block;
+}
+
+.hoverbox .hoverbox-layer-top {
+    opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	color: #fff;
+	padding: 15px;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.hoverbox:hover .hoverbox-layer-top,
+.hoverbox.active .hoverbox-layer-top {
+    opacity: 1;
+}
+
+.hoverbox .hoverbox-text {
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+// SCROLL TRIGGERED ANIMAION
+[data-scroll] {
+    transition: opacity 1s;
+  }
+  [data-scroll="in"] {
+    opacity: 1;
+  }
+  [data-scroll="out"] {
+    opacity: 0;
+  }
+

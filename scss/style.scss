@@ -1,0 +1,29 @@
+// VARIABLES
+$body-fontfamily: 'effra', sans-serif;
+$heading-fontfamily: 'effra', sans-serif;
+
+// COLORS
+$color-text-body: rgba(255, 0, 0, 0.466);
+$color-midgrey: rgba(0,0,0,.5);
+$color-links: rgb(207, 207, 207);
+$color-links-dark: rgb(155, 155, 155);
+
+$color-accent: rgb(77, 240, 150);
+$color-hero-bg: rgba(0, 0, 0, 1);
+
+
+// BREAKPOINTS
+$breakpoint-small: 768px;
+$breakpoint-medium: 1050px;
+$breakpoint-large: 1250px;
+
+
+// IMPORT PARTIALS
+@import 'partials/toc';
+@import 'partials/typography'; 
+@import 'partials/buttons'; 
+@import 'partials/media';  
+@import 'partials/layout';  
+@import 'partials/grid';  
+@import 'partials/structure';  
+
