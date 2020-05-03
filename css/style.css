@@ -60,7 +60,9 @@ p {
   max-width: 35em;
   line-height: 1.7em;
   text-align: left;
-  color: #9b9b9b; }
+  color: #9b9b9b;
+  letter-spacing: .02em;
+  font-size: 95%; }
 
 a {
   color: #cfcfcf; }
@@ -434,7 +436,7 @@ section {
     display: -ms-grid;
     display: grid;
     place-items: center;
-    margin-bottom: 2em; }
+    margin-bottom: 6em; }
   .project .hero .title {
     font-size: 2.5em;
     letter-spacing: .12em;
@@ -445,25 +447,30 @@ section {
     color: white;
     letter-spacing: .12em;
     word-spacing: 1em; }
+  .project .text {
+    padding: 1em; }
   .project .text-box {
     max-width: 35em;
     padding: 2em;
+    padding-top: 0;
     padding-bottom: 0;
     margin: 0 auto; }
     .project .text-box .main-head {
       text-transform: uppercase;
       letter-spacing: .2em;
-      text-align: left; }
+      text-align: left;
+      margin-bottom: 0; }
   .project .image {
     -webkit-box-shadow: 0 12px 40px rgba(38, 45, 56, 0.3);
     box-shadow: 0 12px 40px rgba(38, 45, 56, 0.3);
     border-radius: 1em; }
     .project .image.desktop {
-      max-width: 80%; }
+      max-width: 70%;
+      margin: 3em; }
   .project .colorAnimationBg {
     max-width: 800px;
     border-radius: 1em;
-    margin: 0 auto;
+    margin: 2em auto;
     -webkit-box-shadow: 0 12px 40px rgba(38, 45, 56, 0.3);
     box-shadow: 0 12px 40px rgba(38, 45, 56, 0.3);
     border-radius: 1em;
