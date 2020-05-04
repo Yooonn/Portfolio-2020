@@ -19,9 +19,9 @@ button,
 
 
     &:hover {
-        background-color: $color-links-dark;
+        background-color: $color-links-hover;
         color: #fff;
-        border-color: $color-links-dark;
+        border-color: $color-links-hover;
     }
 
     &.alt {
@@ -30,9 +30,9 @@ button,
         border: 1px solid $color-links;
 
         &:hover {
-            background-color: $color-links-dark;
+            background-color: $color-links-hover;
             color: #fff; 
-            border-color: $color-links-dark;
+            border-color: $color-links-hover;
         }
     }
 

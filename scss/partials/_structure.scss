@@ -145,6 +145,7 @@
 }
 
 .title {
+    color: white;
     padding-top: 6em;
     padding-bottom: 0;
 }
@@ -275,13 +276,51 @@ section {
 
 
         .main-head {
+            font-size: 1.125em;
             text-transform: uppercase;
             letter-spacing: .2em;
             text-align: left;
             margin-bottom: 0;
-            // font-weight: 600;
+            font-weight: 600;
         }
     }
+
+    .overlay {
+        position: relative;
+    }
+
+    .absolute {
+        position: absolute;
+        top: 34%;
+        transition: opacity .5s linear, transform .5s cubic-bezier(0,1,1,1);
+    }
+
+    @keyframes fade-and-move-in {
+        from {
+          transform: translate(0, +20px);
+          opacity: 0;
+        }
+        to {
+          transform: translate(0, 0);
+          opacity: 1;
+        }
+      }
+      
+    .fade-and-move-in * {
+    opacity: 0;
+    animation: fade-and-move-in ease-out 1;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+    }
+
+    .fade-and-move-in *:nth-child(1) {
+    animation-delay: 0.3s;
+    }
+
+
+
+
+
 
     .image {
         box-shadow: 0 12px 40px rgba(38, 45, 56, 0.3);
@@ -290,6 +329,19 @@ section {
         &.desktop {
             max-width: 70%;
             margin: 3em;
+        }
+
+        &.popup {
+
+            max-width: 32%;
+            height: auto;
+            border-radius: .8em;
+            box-shadow:
+            0 6.5px 5.6px -15px rgba(0, 0, 0, 0.06),
+            0 16.3px 12.2px -15px rgba(0, 0, 0, 0.079),
+            0 32.2px 22px -15px rgba(0, 0, 0, 0.084),
+            0 73px 74px -15px rgba(0, 0, 0, 0.08)
+            ;
         }
     }
 
@@ -320,8 +372,33 @@ section {
 
 
 
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3em;
+}
+
+.page-link {
+    display: flex;
+    align-items: center;
+}
+
+.page-link-ic {
+    max-width: 15px;
+    margin: 1.3em;
+}
+
+.page-link-text-wrapper {
+    align-items: center;
+}
+
+.page-link-text {
+    text-align: left;
+    margin-bottom: .7em;
 
 
+    
+}
 
 
 

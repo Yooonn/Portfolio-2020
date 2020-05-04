@@ -37,6 +37,7 @@ body {
 
 h1, h2, h3 {
   font-family: "effra", sans-serif;
+  color: #333333;
   margin: .5em auto;
   font-weight: 500;
   text-align: center; }
@@ -65,10 +66,11 @@ p {
   font-size: 95%; }
 
 a {
-  color: #cfcfcf; }
+  color: #333333;
+  text-decoration: none; }
 
 a:hover {
-  color: #9b9b9b; }
+  opacity: .5; }
 
 hr {
   border: 0;
@@ -90,7 +92,7 @@ hr {
 .meta {
   display: block;
   font-size: .8em;
-  color: rgba(0, 0, 0, 0.5);
+  color: #333333;
   margin: 0 0 2em 0; }
 
 /* TYPE SPECIMEN */
@@ -122,31 +124,31 @@ button {
 
 button,
 .button {
-  background-color: #cfcfcf;
+  background-color: #333333;
   color: #fff;
   padding: 1em 1.6em;
   display: inline-block;
   margin: .5em auto .5em auto;
   border-radius: .5em;
   margin-bottom: 2em;
-  border: 1px solid #cfcfcf;
+  border: 1px solid #333333;
   cursor: pointer;
   text-decoration: none; }
   button:hover,
   .button:hover {
-    background-color: #9b9b9b;
+    background-color: rgba(51, 51, 51, 0.5);
     color: #fff;
-    border-color: #9b9b9b; }
+    border-color: rgba(51, 51, 51, 0.5); }
   button.alt,
   .button.alt {
-    color: #cfcfcf;
+    color: #333333;
     background-color: white;
-    border: 1px solid #cfcfcf; }
+    border: 1px solid #333333; }
     button.alt:hover,
     .button.alt:hover {
-      background-color: #9b9b9b;
+      background-color: rgba(51, 51, 51, 0.5);
       color: #fff;
-      border-color: #9b9b9b; }
+      border-color: rgba(51, 51, 51, 0.5); }
   button.dark,
   .button.dark {
     color: #fff;
@@ -363,6 +365,7 @@ body {
     display: block; } }
 
 .title {
+  color: white;
   padding-top: 6em;
   padding-bottom: 0; }
 
@@ -456,10 +459,53 @@ section {
     padding-bottom: 0;
     margin: 0 auto; }
     .project .text-box .main-head {
+      font-size: 1.125em;
       text-transform: uppercase;
       letter-spacing: .2em;
       text-align: left;
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      font-weight: 600; }
+  .project .overlay {
+    position: relative; }
+  .project .absolute {
+    position: absolute;
+    top: 34%;
+    -webkit-transition: opacity 0.5s linear, -webkit-transform 0.5s cubic-bezier(0, 1, 1, 1);
+    transition: opacity 0.5s linear, -webkit-transform 0.5s cubic-bezier(0, 1, 1, 1);
+    -o-transition: opacity 0.5s linear, transform 0.5s cubic-bezier(0, 1, 1, 1);
+    transition: opacity 0.5s linear, transform 0.5s cubic-bezier(0, 1, 1, 1);
+    transition: opacity 0.5s linear, transform 0.5s cubic-bezier(0, 1, 1, 1), -webkit-transform 0.5s cubic-bezier(0, 1, 1, 1); }
+
+@-webkit-keyframes fade-and-move-in {
+  from {
+    -webkit-transform: translate(0, 20px);
+    transform: translate(0, 20px);
+    opacity: 0; }
+  to {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 1; } }
+
+@keyframes fade-and-move-in {
+  from {
+    -webkit-transform: translate(0, 20px);
+    transform: translate(0, 20px);
+    opacity: 0; }
+  to {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 1; } }
+  .project .fade-and-move-in * {
+    opacity: 0;
+    -webkit-animation: fade-and-move-in ease-out 1;
+    animation: fade-and-move-in ease-out 1;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s; }
+  .project .fade-and-move-in *:nth-child(1) {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s; }
   .project .image {
     -webkit-box-shadow: 0 12px 40px rgba(38, 45, 56, 0.3);
     box-shadow: 0 12px 40px rgba(38, 45, 56, 0.3);
@@ -467,6 +513,12 @@ section {
     .project .image.desktop {
       max-width: 70%;
       margin: 3em; }
+    .project .image.popup {
+      max-width: 32%;
+      height: auto;
+      border-radius: .8em;
+      -webkit-box-shadow: 0 6.5px 5.6px -15px rgba(0, 0, 0, 0.06), 0 16.3px 12.2px -15px rgba(0, 0, 0, 0.079), 0 32.2px 22px -15px rgba(0, 0, 0, 0.084), 0 73px 74px -15px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 6.5px 5.6px -15px rgba(0, 0, 0, 0.06), 0 16.3px 12.2px -15px rgba(0, 0, 0, 0.079), 0 32.2px 22px -15px rgba(0, 0, 0, 0.084), 0 73px 74px -15px rgba(0, 0, 0, 0.08); }
   .project .colorAnimationBg {
     max-width: 800px;
     border-radius: 1em;
@@ -496,6 +548,36 @@ section {
     background-position: 100% 50%; }
   100% {
     background-position: 0% 50%; } }
+
+.page-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 3em; }
+
+.page-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.page-link-ic {
+  max-width: 15px;
+  margin: 1.3em; }
+
+.page-link-text-wrapper {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.page-link-text {
+  text-align: left;
+  margin-bottom: .7em; }
 
 [data-scroll] {
   -webkit-transition: opacity 0.5s linear, -webkit-transform 0.5s cubic-bezier(0, 1, 1, 1);
