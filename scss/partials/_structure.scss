@@ -318,9 +318,11 @@ section {
     }
 
 
-
-
-
+    .image-title {
+        margin-top: 5em;
+        margin-bottom: 3em;
+        color: 	#707577;
+    }
 
     .image {
         box-shadow: 0 12px 40px rgba(38, 45, 56, 0.3);
@@ -344,6 +346,20 @@ section {
             ;
         }
     }
+
+    .wireframe-box {
+        max-width: 900px;
+        height: auto;
+        background-color: rgb(244, 244, 244);
+        display: flex;
+        align-items: center;
+    }
+
+    .wireframe {
+        padding: 1em;
+        margin: 5em 0;
+    }
+    
 
     .colorAnimationBg {
         max-width: 800px;

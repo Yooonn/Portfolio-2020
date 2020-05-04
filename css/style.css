@@ -57,6 +57,14 @@ h3 {
   letter-spacing: .05em;
   text-transform: uppercase; }
 
+h4 {
+  font-size: .9em;
+  line-height: 1.2;
+  letter-spacing: .3em;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase; }
+
 p {
   max-width: 35em;
   line-height: 1.7em;
@@ -506,6 +514,10 @@ section {
   .project .fade-and-move-in *:nth-child(1) {
     -webkit-animation-delay: 0.3s;
     animation-delay: 0.3s; }
+  .project .image-title {
+    margin-top: 5em;
+    margin-bottom: 3em;
+    color: #707577; }
   .project .image {
     -webkit-box-shadow: 0 12px 40px rgba(38, 45, 56, 0.3);
     box-shadow: 0 12px 40px rgba(38, 45, 56, 0.3);
@@ -519,6 +531,19 @@ section {
       border-radius: .8em;
       -webkit-box-shadow: 0 6.5px 5.6px -15px rgba(0, 0, 0, 0.06), 0 16.3px 12.2px -15px rgba(0, 0, 0, 0.079), 0 32.2px 22px -15px rgba(0, 0, 0, 0.084), 0 73px 74px -15px rgba(0, 0, 0, 0.08);
       box-shadow: 0 6.5px 5.6px -15px rgba(0, 0, 0, 0.06), 0 16.3px 12.2px -15px rgba(0, 0, 0, 0.079), 0 32.2px 22px -15px rgba(0, 0, 0, 0.084), 0 73px 74px -15px rgba(0, 0, 0, 0.08); }
+  .project .wireframe-box {
+    max-width: 900px;
+    height: auto;
+    background-color: #f4f4f4;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .project .wireframe {
+    padding: 1em;
+    margin: 5em 0; }
   .project .colorAnimationBg {
     max-width: 800px;
     border-radius: 1em;
