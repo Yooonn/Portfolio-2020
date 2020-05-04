@@ -347,7 +347,6 @@ section {
         }
 
         &.popup {
-
             max-width: 32%;
             height: auto;
             border-radius: .8em;
@@ -355,13 +354,12 @@ section {
             0 6.5px 5.6px -15px rgba(0, 0, 0, 0.06),
             0 16.3px 12.2px -15px rgba(0, 0, 0, 0.079),
             0 32.2px 22px -15px rgba(0, 0, 0, 0.084),
-            0 73px 74px -15px rgba(0, 0, 0, 0.08)
-            ;
+            0 73px 74px -15px rgba(0, 0, 0, 0.08);
         }
     }
 
     .wireframe-box {
-        max-width: 900px;
+        max-width: 800px;
         height: auto;
         background-color: rgb(244, 244, 244);
         display: flex;
@@ -369,8 +367,14 @@ section {
     }
 
     .wireframe {
-        padding: 1em;
+        padding: .5em;
         margin: 5em 0;
+
+        .BookMate {
+            max-width: 600px;
+            margin: 3.4em auto;
+            padding: 1em;
+        }
     }
     
 
@@ -398,6 +402,128 @@ section {
     }
 
 }
+
+
+// PERSONA SLIDES 
+
+
+.persona {
+    min-height: 500px;
+}
+
+#slides {
+    position:relative;
+    max-width: 30em;
+    margin:0 auto;
+}
+
+#slides img {
+    position:absolute;
+    left:0;
+    transition: opacity 1s ease-in-out;
+}
+
+@keyframes slidesFadeInOut {
+  0% {
+  opacity:1;
+  }
+  45% {
+  opacity:1;
+  }
+  55% {
+  opacity:0;
+  }
+  100% {
+  opacity:0;
+  }
+}
+  
+#slides .persona2 {
+  animation-name: slidesFadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-direction: alternate;
+}
+
+#slides .persona3 {
+    animation-name: slidesFadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-direction: alternate;
+
+    // transition-delay: 3s;
+}
+
+.mobileUI-box {
+    // max-width: 800px;
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+}
+
+.mobile {
+    max-width: 260px;
+    margin: 2em;
+    // box-shadow: 0 6px 5px rgba(38, 45, 56, 0.3);
+}
+
+.video-box {
+    max-width: 980px;
+    min-height: 580px;
+    background-color: rgba(162, 170, 175, .4);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mockup-iphone {
+    height: auto;
+    position: relative;
+    z-index: 2;
+    top: 38px;
+    left: -1px;
+    max-width: 380px;
+}
+
+.video-bookmate {
+    position: absolute;
+    // top: 98px;
+    // left: 395px;
+    max-width: 193px;
+    z-index: 1;
+
+    // display: block;
+    // margin-left: auto;
+    // margin-right: auto;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// BOTTOM PAGENATION
 
 .page-nav {
     display: flex;
@@ -452,6 +578,10 @@ section {
     place-items: center;
     margin-bottom: 6em;
 }
+
+
+
+
 
 
 

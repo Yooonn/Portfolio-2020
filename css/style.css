@@ -529,7 +529,7 @@ section {
       -webkit-box-shadow: 0 6.5px 5.6px -15px rgba(0, 0, 0, 0.06), 0 16.3px 12.2px -15px rgba(0, 0, 0, 0.079), 0 32.2px 22px -15px rgba(0, 0, 0, 0.084), 0 73px 74px -15px rgba(0, 0, 0, 0.08);
       box-shadow: 0 6.5px 5.6px -15px rgba(0, 0, 0, 0.06), 0 16.3px 12.2px -15px rgba(0, 0, 0, 0.079), 0 32.2px 22px -15px rgba(0, 0, 0, 0.084), 0 73px 74px -15px rgba(0, 0, 0, 0.08); }
   .project .wireframe-box {
-    max-width: 900px;
+    max-width: 800px;
     height: auto;
     background-color: #f4f4f4;
     display: -webkit-box;
@@ -539,8 +539,12 @@ section {
     -ms-flex-align: center;
     align-items: center; }
   .project .wireframe {
-    padding: 1em;
+    padding: .5em;
     margin: 5em 0; }
+    .project .wireframe .BookMate {
+      max-width: 600px;
+      margin: 3.4em auto;
+      padding: 1em; }
   .project .colorAnimationBg {
     max-width: 800px;
     border-radius: 1em;
@@ -570,6 +574,106 @@ section {
     background-position: 100% 50%; }
   100% {
     background-position: 0% 50%; } }
+
+.persona {
+  min-height: 500px; }
+
+#slides {
+  position: relative;
+  max-width: 30em;
+  margin: 0 auto; }
+
+#slides img {
+  position: absolute;
+  left: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out; }
+
+@-webkit-keyframes slidesFadeInOut {
+  0% {
+    opacity: 1; }
+  45% {
+    opacity: 1; }
+  55% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+
+@keyframes slidesFadeInOut {
+  0% {
+    opacity: 1; }
+  45% {
+    opacity: 1; }
+  55% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+
+#slides .persona2 {
+  -webkit-animation-name: slidesFadeInOut;
+  animation-name: slidesFadeInOut;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate; }
+
+#slides .persona3 {
+  -webkit-animation-name: slidesFadeInOut;
+  animation-name: slidesFadeInOut;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate; }
+
+.mobileUI-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 2em; }
+
+.mobile {
+  max-width: 260px;
+  margin: 2em; }
+
+.video-box {
+  max-width: 980px;
+  min-height: 580px;
+  background-color: rgba(162, 170, 175, 0.4);
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.mockup-iphone {
+  height: auto;
+  position: relative;
+  z-index: 2;
+  top: 38px;
+  left: -1px;
+  max-width: 380px; }
+
+.video-bookmate {
+  position: absolute;
+  max-width: 193px;
+  z-index: 1; }
 
 .page-nav {
   display: -webkit-box;
