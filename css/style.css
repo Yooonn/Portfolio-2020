@@ -115,6 +115,7 @@ hr {
   margin-bottom: 3em; }
 
 .hoverbox-mainhead {
+  color: white;
   margin: 0;
   padding: 0;
   letter-spacing: .2em; }
@@ -397,6 +398,8 @@ section {
   max-width: 90%;
   height: auto;
   margin: 0 auto; }
+  .hoverbox a:hover {
+    opacity: 1; }
 
 .hoverbox img {
   max-width: 100%; }
@@ -413,7 +416,7 @@ section {
   bottom: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.5);
   color: #fff;
   padding: 15px;
   -webkit-transition: all 0.4s ease-in-out 0s;
@@ -437,17 +440,10 @@ section {
 /* PROJECT PAGE */
 .project {
   position: relative; }
-  .project .hero {
-    background-color: black;
-    color: #fff;
-    background-image: url(../img/Memory/kristopher-roller-zepnJQycr4U-unsplash.jpg);
-    background-size: cover;
-    padding: 6em 1em;
-    min-height: 100vh;
-    display: -ms-grid;
-    display: grid;
-    place-items: center;
-    margin-bottom: 6em; }
+  .project header {
+    z-index: 2; }
+  .project .hero-textbox {
+    z-index: 2; }
   .project .hero .title {
     font-size: 2.5em;
     letter-spacing: .12em;
@@ -457,7 +453,8 @@ section {
   .project .hero .sub-head {
     color: white;
     letter-spacing: .12em;
-    word-spacing: 1em; }
+    word-spacing: 1em;
+    text-align: center; }
   .project .text {
     padding: 1em; }
   .project .text-box {
@@ -603,6 +600,32 @@ section {
 .page-link-text {
   text-align: left;
   margin-bottom: .7em; }
+
+.hero.memory {
+  background-color: black;
+  color: #fff;
+  background-image: url(../img/Memory/kristopher-roller-zepnJQycr4U-unsplash-min.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 6em 1em;
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  margin-bottom: 6em; }
+
+.hero.BookMate {
+  background-color: black;
+  color: #fff;
+  background-image: url(../img/BookMate/thought-catalog-o0Qqw21-0NI-unsplash-min.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 6em 1em;
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  margin-bottom: 6em; }
 
 [data-scroll] {
   -webkit-transition: opacity 0.5s linear, -webkit-transform 0.5s cubic-bezier(0, 1, 1, 1);

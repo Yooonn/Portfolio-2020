@@ -177,6 +177,10 @@ section {
     max-width: 90%;
     height: auto;
     margin: 0 auto;
+
+    a:hover {
+        opacity: 1;
+    }
 }
 
 .hoverbox img {
@@ -196,7 +200,7 @@ section {
 	bottom: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(0, 0, 0, 0.6);
+	background: rgba(0, 0, 0, 0.5);
 	color: #fff;
 	padding: 15px;
     transition: all 0.4s ease-in-out 0s;
@@ -236,17 +240,12 @@ section {
 .project {
     position: relative;
 
-    .hero {
-        background-color: $color-hero-bg;
-        color: #fff;
-        background-image: url(../img/Memory/kristopher-roller-zepnJQycr4U-unsplash.jpg);
-        background-size: cover;
-        padding: 6em 1em;
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-        margin-bottom: 6em;
+    header {
+        z-index: 2;  
+    }
 
+    .hero-textbox {
+        z-index: 2;  
     }
 
     .hero .title {
@@ -255,13 +254,27 @@ section {
         text-transform: uppercase;
         padding-top: 0;
         margin-bottom: .7em;
+        // text-shadow: 0 0 20px rgba(38, 45, 56, 0.3);
     }
 
     .hero .sub-head {
         color: white;
         letter-spacing: .12em;
         word-spacing: 1em;
+        text-align: center;
+        // text-shadow: 0 0 5px rgba(38, 45, 56, 0.3);
     }
+
+    // .hero::after {
+    //     content: "";
+    //     background-color:rgba(0,0,0,0.2);
+    //     top: 0;
+    //     left: 0;
+    //     bottom: 0;
+    //     right: 0;
+    //     position: absolute;
+    //     z-index: 1;   
+    // }
 
     .text {
         padding: 1em;
@@ -386,8 +399,6 @@ section {
 
 }
 
-
-
 .page-nav {
     display: flex;
     justify-content: space-between;
@@ -411,10 +422,40 @@ section {
 .page-link-text {
     text-align: left;
     margin-bottom: .7em;
-
-
-    
 }
+
+
+// HERO BACKGROUND
+
+.hero.memory {
+    background-color: $color-hero-bg;
+    color: #fff;
+    background-image: url(../img/Memory/kristopher-roller-zepnJQycr4U-unsplash-min.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 6em 1em;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    margin-bottom: 6em;
+}
+
+.hero.BookMate {
+    background-color: $color-hero-bg;
+    color: #fff;
+    background-image: url(../img/BookMate/thought-catalog-o0Qqw21-0NI-unsplash-min.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 6em 1em;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    margin-bottom: 6em;
+}
+
+
+
+
 
 
 
