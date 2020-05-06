@@ -394,7 +394,7 @@ section {
 
 
     .image-title {
-        margin-top: 5em;
+        margin-top: 4em;
         margin-bottom: 3em;
         color: 	#707577;
     }
@@ -421,24 +421,23 @@ section {
     }
 
     .wireframe-box {
-        max-width: 800px;
-        height: auto;
+        max-width: 940px;
         background-color: rgb(244, 244, 244);
-        display: flex;
-        align-items: center;
     }
 
-    .wireframe {
+    .wireframe-memory {
         padding: .5em;
         margin: 5em 0;
-
-        .BookMate {
-            max-width: 600px;
-            margin: 3.4em auto;
-            padding: 1em;
-        }
     }
-    
+
+    .wireframe-BookMate {
+        padding: 5em 7em;
+
+        @media (max-width:767px) {
+            padding: 3em;
+        }
+        
+    }
 
     .colorAnimationBg {
         max-width: 800px;
@@ -468,55 +467,27 @@ section {
 
 // PERSONA SLIDES 
 
-
-.persona {
-    min-height: 500px;
-}
-
-#slides {
-    position:relative;
-    max-width: 30em;
-    margin:0 auto;
-}
-
-#slides img {
-    position:absolute;
-    left:0;
-    transition: opacity 1s ease-in-out;
-}
-
-@keyframes slidesFadeInOut {
-  0% {
-  opacity:1;
+#slideshow {
+    margin: 1em auto;
+    position: relative;
+    max-width: 720px;
+    height: auto;
+    min-height: 28em;
+    
+    @media (max-width:767px) {
+        min-height: 10em;
+    }
   }
-  45% {
-  opacity:1;
-  }
-  55% {
-  opacity:0;
-  }
-  100% {
-  opacity:0;
-  }
-}
   
-#slides .persona2 {
-  animation-name: slidesFadeInOut;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-duration: 2s;
-  animation-direction: alternate;
+#slideshow > div {
+position: absolute;
 }
 
-#slides .persona3 {
-    animation-name: slidesFadeInOut;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-duration: 4s;
-    animation-direction: alternate;
 
-    // transition-delay: 3s;
-}
+
+
+
+
 
 .mobileUI-box {
     // max-width: 800px;
