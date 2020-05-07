@@ -571,17 +571,17 @@ section {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
     opacity: 1; } }
-  .project .fade-and-move-in * {
-    opacity: 0;
+  .project .fade-and-move-in {
+    opacity: 0; }
+  .project [data-scroll="in"] .fade-and-move-in {
     -webkit-animation: fade-and-move-in ease-out 1;
     animation: fade-and-move-in ease-out 1;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-    -webkit-animation-duration: 0.5s;
-    animation-duration: 0.5s; }
-  .project .fade-and-move-in *:nth-child(1) {
-    -webkit-animation-delay: 0.3s;
-    animation-delay: 0.3s; }
+    -webkit-animation-duration: .8s;
+    animation-duration: .8s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s; }
   .project .image-title {
     margin-top: 4em;
     margin-bottom: 3em;
@@ -662,9 +662,28 @@ section {
   justify-content: center;
   padding: 2em; }
 
+.process-alignment:nth-child(1) {
+  -webkit-transition-delay: .2s;
+  -o-transition-delay: .2s;
+  transition-delay: .2s; }
+
+.process-alignment:nth-child(2) {
+  -webkit-transition-delay: .6s;
+  -o-transition-delay: .6s;
+  transition-delay: .6s; }
+
+.process-alignment:nth-child(3) {
+  -webkit-transition-delay: 1s;
+  -o-transition-delay: 1s;
+  transition-delay: 1s; }
+
 .mobile {
   max-width: 260px;
   margin: 2em; }
+
+.process-title {
+  letter-spacing: .1em;
+  color: #707577; }
 
 .video-box {
   max-width: 980px;
@@ -701,7 +720,7 @@ section {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-top: 3em; }
+  margin: 3em 10px 0; }
 
 .page-link {
   display: -webkit-box;
@@ -712,7 +731,7 @@ section {
   align-items: center; }
 
 .page-link-ic {
-  max-width: 15px;
+  max-width: 12px;
   margin: 1.3em; }
 
 .page-link-text-wrapper {
@@ -722,7 +741,8 @@ section {
 
 .page-link-text {
   text-align: left;
-  margin-bottom: .7em; }
+  margin-bottom: .75em;
+  font-size: 1.2em; }
 
 .hero.memory {
   background-color: black;
@@ -759,3 +779,9 @@ section {
 
 [data-scroll="in"] {
   opacity: 1; }
+
+[data-scroll="out"] {
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+  -ms-transform: translateY(20px);
+  transform: translateY(20px); }

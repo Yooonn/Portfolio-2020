@@ -76,15 +76,6 @@
     </div>
   </section>
 
-
-
-
-
-
-
-
-
-
   <section class="revealer wireframe" data-scroll="out">
     <div class="container">
       <h4 class="image-title">wireframe</h4>
@@ -104,13 +95,31 @@
     </div>
   </section>
 
-  <section class="revealer" data-scroll="out">
+  <section class="revealer">
     <div class="container mobileUI-box">
       <div class="row">
-      <img class="image mobile" src="img/BookMate/mobile-ui-1.png" alt="mobile ui">
-      <img class="image mobile" src="img/BookMate/mobile-ui-2.png" alt="mobile ui">
-      <img class="image mobile" src="img/BookMate/mobile-ui-3.png" alt="mobile ui">
+        <div class="process-alignment" data-scroll="out">
+          <h4 class="process-title">Book scan</h4>
+          <img class="image mobile" src="img/BookMate/mobile-ui-1.png" alt="mobile ui">
+        </div>
+        <div class="process-alignment" data-scroll="out">
+          <h4 class="process-title">Confirm</h4>
+          <img class="image mobile" src="img/BookMate/mobile-ui-2.png" alt="mobile ui">
+        </div>
+        <div class="process-alignment" data-scroll="out">
+          <h4 class="process-title">Collect data</h4>
+          <img class="image mobile" src="img/BookMate/mobile-ui-3.png" alt="mobile ui">
+        </div>
+      </div>
     </div>
+  </section>
+
+  <section class="text">
+    <div class="container">
+      <div class="text-box">
+        <h3 class="main-head">User centric information</h3>
+        <p>Lorem ipsudm, dolor sit amet consectetur adipisicing elit. Voluptate hic vel nobis optio, quasi molestias saepe non cupiditate dicta? Explicabo ipsum quae sunt quo consectetur, vitae voluptate sequi reiciendis, similique ex obcaecati dolorum nulla quia aliquam consequuntur tenetur rerum! Voluptate, nesciunt cupiditate? Suscipit quisquam non corporis! Earum temporibus neque repellat?</p>
+      </div>
     </div>
   </section>
 
@@ -118,8 +127,6 @@
     <div class="container video-box">
       <img class="mockup-iphone" src="img/BookMate/iphone-x-mask@2x-min.png" alt="iphone">
       <video class="video-bookmate" src="img/BookMate/P2-Prototype-setting.mp4" loop=true autoplay type="video/mp4" ></video>
-
-    </div>
     </div>
   </section>
 
@@ -175,7 +182,8 @@
   <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
   <script>ScrollOut(
       {
-        threshold: 0.4
+        threshold: 0.4,
+        once: true
       }
     );
   </script>

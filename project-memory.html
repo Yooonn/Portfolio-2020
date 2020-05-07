@@ -91,7 +91,7 @@
 
   <section class="revealer" data-scroll="out">
     <div class="container overlay">
-      <div class="absolute fade-and-move-in" data-scroll="out">
+      <div class="absolute fade-and-move-in">
         <img class="image popup" src="img/Memory/popup@2x-min.png" alt=popup>
       </div>
       <img class="image desktop" src="img/Memory/C-2-Memorial page-2@2x-min.jpg" alt="Memory">
@@ -115,7 +115,7 @@
 
 
   
-  <!-- <hr /> -->
+
 
   <section class="page-nav" data-scroll="out">
     <a href="#" class="page-link prev">
@@ -126,7 +126,6 @@
         <h3 class="page-link-text">Previous work</h3>
       </div>
     </a>
-
     <a href="#" class="page-link next">
       <div class="page-link-text-wrapper">
         <h3 class="page-link-text">Next work</h3>
@@ -135,17 +134,7 @@
         <img class="icon-arrow" src="img/Icon-arrow-forward.svg" alt="arrow-right">
       </div>
     </a>
-
-
   </section>
-
-
-
-
-
-
-
-
 
   <!-- SMOOTH SCROLL -->
   <script src="js/smooth-scroll.polyfills.min.js"></script>
@@ -157,7 +146,8 @@
   <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
   <script>ScrollOut(
       {
-        threshold: 0.4
+        threshold: 0.4,
+        once: true
       }
     );
   </script>
