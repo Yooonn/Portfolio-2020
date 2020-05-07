@@ -65,7 +65,7 @@
         top: 0;
         left: 0;
         margin: 0;
-        background: rgba(0, 0, 0, .94);
+        background: rgba(0, 0, 0, .9);
     
         ul {
         position: fixed;
@@ -186,8 +186,14 @@
     display: block;
     margin-left: .5em;
     transform: rotate(0);
-    // transition: .2s all ease-out;
+    transition: .2s all ease-out;
 }
+
+// .hero .navicon::after {
+//     @media (max-width:767px) {
+//         color: $color-midgrey !important;
+//     }
+// }
 
 .expanded .navicon::after {
     content: "\2715";
@@ -220,10 +226,11 @@ section {
 
 
 .hero {
-    background-color: $color-hero-bg;
+    // background-color: $color-hero-bg;
     color: #fff;
-    background-image: url(https://picsum.photos/1600/900?grayscale);
-    background-size: cover;
+    // background-image: url(https://picsum.photos/1600/900?grayscale);
+    // background-size: cover;
+    // background-color: #c0d6df;
     padding: 6em 1em;
     min-height: 100vh;
     display: grid;
@@ -236,9 +243,10 @@ section {
     position: relative;
     // display: inline-block;
     overflow: hidden;
-    max-width: 90%;
+    max-width: 80%;
     height: auto;
     margin: 0 auto;
+    margin-bottom: 4em;
 
     a:hover {
         opacity: 1;
@@ -294,7 +302,15 @@ section {
     
 // }
 
+// .project-thumb  {
+//     &:nth-child(1) {
+//         transition-delay: .3s;
+//     }
 
+//     &:nth-child(2) {
+//         transition-delay: .6s;
+//     }
+// }
 
 
 /* PROJECT PAGE */
@@ -327,16 +343,7 @@ section {
         // text-shadow: 0 0 5px rgba(38, 45, 56, 0.3);
     }
 
-    // .hero::after {
-    //     content: "";
-    //     background-color:rgba(0,0,0,0.2);
-    //     top: 0;
-    //     left: 0;
-    //     bottom: 0;
-    //     right: 0;
-    //     position: absolute;
-    //     z-index: 1;   
-    // }
+
 
     .text {
         padding: 1em;
@@ -427,7 +434,7 @@ section {
     }
 
     .wireframe-memory {
-        padding: .5em;
+        padding: .5em 3em;
         margin: 5em 0;
     }
 

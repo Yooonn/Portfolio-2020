@@ -86,6 +86,19 @@ hr {
   background: rgba(0, 0, 0, 0.15);
   margin: 4em 0; }
 
+.home a {
+  color: #333333 !important; }
+
+.hero h3 {
+  font-size: 1.8em; }
+  @media (max-width: 767px) {
+    .hero h3 {
+      letter-spacing: .02em; } }
+
+@media (max-width: 767px) {
+  .hero br {
+    display: none; } }
+
 .sectionhead {
   text-align: center;
   font-family: "effra", sans-serif;
@@ -94,14 +107,7 @@ hr {
   line-height: 1;
   text-transform: uppercase;
   letter-spacing: .4em;
-  margin-top: 2em;
   margin-bottom: 3em; }
-
-.meta {
-  display: block;
-  font-size: .8em;
-  color: #333333;
-  margin: 0 0 2em 0; }
 
 /* TYPE SPECIMEN */
 .mainhead {
@@ -118,15 +124,18 @@ hr {
   color: white;
   margin: 0;
   padding: 0;
-  letter-spacing: .2em; }
+  letter-spacing: .1em;
+  font-size: 1.9em;
+  text-align: center; }
 
 .hoverbox-subhead {
   font-size: .9em;
   font-weight: 300;
   letter-spacing: .08em;
   color: #ffffff;
-  margin: 0;
-  padding: 0; }
+  margin: .1em;
+  padding: 0;
+  text-align: center; }
 
 button {
   font-size: inherit; }
@@ -169,12 +178,14 @@ button,
     color: #000; }
 
 .button-underline {
-  color: #fff;
   padding: 1em 1.6em;
   display: block;
   margin: .5em auto .5em auto;
   text-decoration: none;
-  text-align: center; }
+  text-align: center;
+  -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease; }
 
 img {
   max-width: 100%;
@@ -315,7 +326,7 @@ body {
       top: 0;
       left: 0;
       margin: 0;
-      background: rgba(0, 0, 0, 0.94); }
+      background: rgba(0, 0, 0, 0.9); }
       .site-nav ul {
         position: fixed;
         top: 50%;
@@ -427,7 +438,10 @@ body {
   margin-left: .5em;
   -webkit-transform: rotate(0);
   -ms-transform: rotate(0);
-  transform: rotate(0); }
+  transform: rotate(0);
+  -webkit-transition: .2s all ease-out;
+  -o-transition: .2s all ease-out;
+  transition: .2s all ease-out; }
 
 .expanded .navicon::after {
   content: "\2715";
@@ -453,10 +467,7 @@ section {
   padding: 3em 0; }
 
 .hero {
-  background-color: black;
   color: #fff;
-  background-image: url(https://picsum.photos/1600/900?grayscale);
-  background-size: cover;
   padding: 6em 1em;
   min-height: 100vh;
   display: -ms-grid;
@@ -466,9 +477,10 @@ section {
 .hoverbox {
   position: relative;
   overflow: hidden;
-  max-width: 90%;
+  max-width: 80%;
   height: auto;
-  margin: 0 auto; }
+  margin: 0 auto;
+  margin-bottom: 4em; }
   .hoverbox a:hover {
     opacity: 1; }
 
@@ -603,7 +615,7 @@ section {
     max-width: 940px;
     background-color: #f4f4f4; }
   .project .wireframe-memory {
-    padding: .5em;
+    padding: .5em 3em;
     margin: 5em 0; }
   .project .wireframe-BookMate {
     padding: 5em 7em; }

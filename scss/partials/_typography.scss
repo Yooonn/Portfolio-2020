@@ -69,6 +69,26 @@ hr {
     margin: 4em 0;
 }
 
+
+.home a {
+    color: $color-midgrey !important;
+}
+
+.hero h3 {
+    font-size: 1.8em;
+    @media (max-width:767px) {
+        // font-size: 200%;
+        // text-align: left;
+        letter-spacing: .02em;
+   }  
+}
+
+.hero br {
+    @media (max-width:767px) {
+        display: none;
+    }
+}
+
 // HELPER
 .sectionhead {
     text-align: center;
@@ -78,17 +98,17 @@ hr {
     line-height: 1;
     text-transform: uppercase;
     letter-spacing: .4em;
-    margin-top: 2em;
+    // margin-top: 2em;
     margin-bottom: 3em;
 }
 
-.meta {
-    display: block;
-    font-size: .8em;
-    color: $color-midgrey;
-    margin: 0 0 2em 0;
+// .meta {
+//     display: block;
+//     font-size: .8em;
+//     color: $color-midgrey;
+//     margin: 0 0 2em 0;
 
-}
+// }
 
 /* TYPE SPECIMEN */
 .mainhead {
@@ -108,7 +128,9 @@ hr {
     color: white;
     margin: 0;
     padding: 0;
-    letter-spacing: .2em;
+    letter-spacing: .1em;
+    font-size: 1.9em;
+    text-align: center;
 }
 
 .hoverbox-subhead {
@@ -116,6 +138,7 @@ hr {
     font-weight: 300;
     letter-spacing: .08em;
     color: #ffffff;
-    margin: 0;
+    margin: .1em;
     padding: 0;
+    text-align: center;
 }
